@@ -13,6 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-image: url(./assets/bunch-of-plants.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
 a {
   font-weight: 500;
   color: #646cff;

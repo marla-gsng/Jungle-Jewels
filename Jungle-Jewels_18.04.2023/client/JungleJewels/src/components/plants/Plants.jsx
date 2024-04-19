@@ -9,8 +9,9 @@ const Plants = () => {
 
   const fetchPlants = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/plants");
+      const response = await axios.get("http://localhost:3000/api/plants");
       setPlants(response.data);
+      console.log(response.data);
       setLoading(false);
     } catch (error) {
       setError(error);
@@ -29,22 +30,26 @@ const Plants = () => {
     <>
       <div>
         <h1>Plants</h1>
-        <ul>
-          {plants.map((plant) => {
+        <div className="main-container">
+          {plants.map((plant, index) => {
             return (
               <>
-                <div key={plant._id} className="plant-card">
+                <div key={index} className="plant-card">
                   <h2>{plant.name}</h2>
+                  <img
+                    src={`http://localhost:3000/${plant.image}`}
+                    alt={plant.name}
+                  />
                   <p>{plant.description}</p>
                   <p>Care: {plant.care}</p>
-                  <p>Price: €{plant.price}</p>
+
                   <p>Difficulty Level: {plant.difficultyLevel}</p>
                   <p>Rarity: {plant.rarity}</p>
                 </div>
               </>
             );
           })}
-        </ul>
+        </div>
       </div>
     </>
   );
