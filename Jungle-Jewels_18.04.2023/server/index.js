@@ -7,6 +7,8 @@ import plantRouter from "./routes/plantRouter.js";
 
 const app = express();
 
+app.use(express.static("public"));
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
