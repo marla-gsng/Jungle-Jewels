@@ -1,6 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Plants.css";
+import OnePlant from "./OnePlant.jsx";
+import { Link } from "react-router-dom";
+import AddPlant from "./AddPlant.jsx";
 
 const Plants = () => {
   const [plants, setPlants] = useState(null);
@@ -30,27 +33,19 @@ const Plants = () => {
     <>
       <div>
         <h1>Plants</h1>
-        <div className="main-container">
+        <div key={plants} className="main-container">
           {plants.map((plant, index) => {
             return (
               <>
-                <div key={index} className="plant-card">
-                  <h2>{plant.name}</h2>
-                  <img
-                    src={`http://localhost:3000/${plant.image}`}
-                    alt={plant.name}
-                  />
-                  <p>{plant.description}</p>
-                  <p>Care: {plant.care}</p>
-
-                  <p>Difficulty Level: {plant.difficultyLevel}</p>
-                  <p>Rarity: {plant.rarity}</p>
-                </div>
+                <OnePlant {...plant} />
               </>
             );
           })}
         </div>
       </div>
+      <Link to="/plants/addplant">
+        <button>Add Plant</button>
+      </Link>
     </>
   );
 };

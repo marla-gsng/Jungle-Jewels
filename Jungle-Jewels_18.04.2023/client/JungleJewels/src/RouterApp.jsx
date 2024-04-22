@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/navigation/NavBar.jsx";
 import Home from "./Home.jsx";
 import Plants from "./components/plants/Plants.jsx";
+import OnePlant from "./components/plants/OnePlant.jsx";
+import AddPlant from "./components/plants/AddPlant.jsx";
 
 const RouterApp = () => {
   return (
@@ -10,6 +12,8 @@ const RouterApp = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plants" element={<Plants />} />
+        <Route path="/plants/:id" element={<OnePlant />} />
+        <Route path="/plants/addplant" element={<AddPlant />} />
       </Routes>
     </>
   );

@@ -9,7 +9,7 @@ function Home() {
 
         <p>
           Come and explore a vast collection of plants and find helpful advice
-          to look after you plant babies.
+          to look after your plant babies.
         </p>
       </div>
     </>
