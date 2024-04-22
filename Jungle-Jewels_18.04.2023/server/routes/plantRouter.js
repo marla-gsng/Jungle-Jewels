@@ -28,33 +28,33 @@ plantRouter.get("/plants/:id", async (req, res) => {
   }
 });
 
-// plantRouter.post("/plants", async (req, res) => {
-//   try {
-//     const plant = await plantData.create(req.body);
-//     res.json(plant);
-//   } catch (err) {
-//     res.json(err);
-//   }
-// });
+plantRouter.post("/plants", async (req, res) => {
+  try {
+    const plant = await plantData.create(req.body);
+    res.json(plant);
+  } catch (err) {
+    res.json(err);
+  }
+});
 
-// plantRouter.put("/plants/:id", async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const plant = await plantData.findByIdAndUpdate(id, req.body);
-//     res.json(plant);
-//   } catch (err) {
-//     res.json(err);
-//   }
-// });
+plantRouter.put("/plants/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const plant = await plantData.findByIdAndUpdate(id, req.body);
+    res.json(plant);
+  } catch (err) {
+    res.json(err);
+  }
+});
 
-// plantRouter.delete("/plants/:id", async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const plant = await plantData.findByIdAndDelete(id);
-//     res.json(plant);
-//   } catch (err) {
-//     res.json(err);
-//   }
-// });
+plantRouter.delete("/plants/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const plant = await plantData.findByIdAndDelete(id);
+    res.json(plant);
+  } catch (err) {
+    res.json(err);
+  }
+});
 
 export default plantRouter;
