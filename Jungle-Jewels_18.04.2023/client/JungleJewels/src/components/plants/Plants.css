@@ -1,11 +1,15 @@
 .plants-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    width: 100%;
 }
 
 .main-container {
     display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
 }
 
 .plant-card {
@@ -36,3 +40,7 @@ img {
     border-radius: 50%;
    
 }
+
+h2 {
+    color: rgb(48, 223, 48);
+}   

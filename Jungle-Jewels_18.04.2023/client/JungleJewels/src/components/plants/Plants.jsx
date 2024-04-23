@@ -12,7 +12,7 @@ const Plants = () => {
 
   const fetchPlants = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/plants");
+      const response = await axios.get("http://localhost:3000/plants");
       setPlants(response.data);
       console.log(response.data);
       setLoading(false);
