@@ -47,7 +47,7 @@ const plantData = [
     care: "Fiddle leaf fig plants are easy to care for and grow best in well-drained soil. They require bright, indirect sunlight and should be watered regularly.",
     difficultyLevel: "Medium",
     rarity: "Common",
-    image: "/fiddle_scott-webb-unsplash.jpg",
+    image: "./fiddle_scott-webb-unsplash.jpg",
   },
 
   {
@@ -60,6 +60,16 @@ const plantData = [
     rarity: "Common",
     image: "./ZZ_nicolas-solerieu-unsplash.jpg",
   },
+  // {
+  //   id: 7,
+  //   name: "Pothos",
+  //   description:
+  //     "Epipremnum aureum is a species of flowering plant in the arum family Araceae, native to Mo'orea in the Society Islands of French Polynesia. The species is a popular houseplant in temperate regions, but has also become naturalized in tropical and sub-tropical forests worldwide.",
+  //   care: "Pothos plants are easy to care for and grow best in well-drained soil. They require bright, indirect sunlight and should be watered regularly.",
+  //   difficultyLevel: "Easy",
+  //   rarity: "Common",
+  //   image: "./pothos_lasma-balode-unsplash.jpg",
+  // },
 ];
 
 export default plantData;
