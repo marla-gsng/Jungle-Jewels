@@ -4,8 +4,9 @@ const plantSchema = new Schema({
   name: String,
   description: String,
   care: String,
-  difficultyLevel: Number,
+  difficultyLevel: String,
   rarity: String,
+  image: String,
 });
 
 const Plant = mongoose.model("Plant", plantSchema);
