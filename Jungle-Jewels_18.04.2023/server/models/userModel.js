@@ -1,11 +1,11 @@
-import mongoose from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-const userSchema = new mongoose.Schema({
-  name: String,
+const userSchema = new Schema({
   username: String,
   email: String,
   password: String,
-  image: String,
+  profileImage: String,
+  createdAt: Date,
 });
 
 const User = mongoose.model("User", userSchema);
