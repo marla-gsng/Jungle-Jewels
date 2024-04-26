@@ -10,3 +10,9 @@
     color: white;
     text-align: center;
 }
+
+.hero-section h2 {
+    
+    color: antiquewhite;
+    background-blend-mode: darken;
+}

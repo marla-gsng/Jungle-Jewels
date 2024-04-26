@@ -8,8 +8,8 @@
 .main-container {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
     justify-content: center;
+
 }
 
 .plant-card {
@@ -21,8 +21,6 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     background-color: black;
     color: black;
-
-
 
 }
 
@@ -42,5 +40,5 @@ img {
 }
 
 h2 {
-    color: rgb(48, 223, 48);
+    color: rgb(223, 147, 48);
 }   

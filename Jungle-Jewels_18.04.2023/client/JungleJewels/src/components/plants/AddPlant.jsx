@@ -11,21 +11,31 @@ const AddPlant = () => {
   const [care, setCare] = useState(null);
   const [difficultyLevel, setDifficultyLevel] = useState(null);
   const [rarity, setRarity] = useState(null);
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(undefined);
   const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
   //   const { image, setImage } = useState(null);
 
   const postPlant = async (e) => {
     e.preventDefault();
+
+    const plantToAdd = new FormData();
+    plantToAdd.append("name", name);
+    plantToAdd.append("description", description);
+    plantToAdd.append("care", care);
+    plantToAdd.append("difficultyLevel", difficultyLevel);
+    plantToAdd.append("rarity", rarity);
+    plantToAdd.append("image", image);
     try {
       const response = await axios.post("http://localhost:3000/plants", {
-        name,
-        description,
-        care,
-        difficultyLevel,
-        rarity,
-        image,
+        plantToAdd,
+        // name,
+        // description,
+        // care,
+        // difficultyLevel,
+        // rarity,
+        // image,
+        // * Old form of posting data // destructuring the plantToAdd object
       });
       console.log(response.data);
       setMessage("You've added a new plant!");
@@ -34,12 +44,14 @@ const AddPlant = () => {
     } catch (error) {
       setError(error);
     } finally {
-      setName("");
-      setDescription("");
-      setCare("");
-      setDifficultyLevel("");
-      setRarity("");
-      setImage("");
+      navigate("/plants");
+      // setName("");
+      // setDescription("");
+      // setCare("");
+      // setDifficultyLevel("");
+      // setRarity("");
+      // setImage("");
+      //* Old form of resetting the form
     }
   };
 
@@ -90,10 +102,10 @@ const AddPlant = () => {
             onChange={(e) => setRarity(e.target.value)}
           />
           <input
-            type="text"
+            type="file"
             placeholder="Image"
             value={image}
-            onChange={(e) => setImage(e.target.value)}
+            onChange={(e) => setImage(e.target.files[0])}
           />
 
           <button type="submit">Add Plant</button>

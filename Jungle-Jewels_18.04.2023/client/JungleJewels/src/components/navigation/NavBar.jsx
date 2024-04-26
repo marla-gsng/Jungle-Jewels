@@ -16,6 +16,11 @@ const NavBar = () => {
             Plants
           </Link>
         </li>
+        <li className="navbar-item">
+          <Link to="/community" className="navbar-link">
+            Community
+          </Link>
+        </li>
       </ul>
     </nav>
   );
